@@ -1,0 +1,54 @@
+site_name: LibDB
+site_description: Easy Management and Creation of Database Based on JSON Format with High Speed and Optimized.
+site_author: 'Pymmdrza@gmail.com'
+repo_url: 'https://github.com/libdb/Libdb'
+
+nav:
+    - Home: index.md
+    - install in Windows: '#install-with-pip-in-windows'
+    - install in linux: '#install-with-pip3-in-linux'
+    - install with Git: '#install-with-git'
+    - Git Option: '#git-options'
+    - Bug Tracking: 'https://github.com/libdb/Libdb/issues'
+    - Pull Requests: 'https://github.com/libdb/Libdb/pulls'
+    - Source: 'https://github.com/libdb/Libdb'
+    - Example & usage: '#usage'
+    - Initializing the Database: '#initializing-the-database'
+    - Creating a New Entry: '#creating-a-new-entry'
+    - Bulk Creating Entries: '#bulk-creating-entries'
+    - Updating an Entry: '#updating-an-entry'
+    - Deleting an Entry: '#deleting-an-entry'
+    - Listing All Keys: '#listing-all-keys'
+    - Clearing the Database: '#clearing-the-database'
+    - Searching for Entries: '#searching-for-entries'
+    - Mmdrza.Com: 'https://mmdrza.com'
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+  links:
+    not_found: warn
+    absolute_links: info
+    unrecognized_links: info
+theme:
+  name: readthedocs
+  locale: en
+  collapse_by_default: false
+  include_homepage_in_sidebar: true
+  features:
+    - navigation.tabs
+    - navigation.instant
+
+plugins:
+  - search:
+      indexing: 'full'
+
+markdown_extensions:
+  - smarty
+  - toc:
+      permalink: true
+      separator: "-"
+  - sane_lists
+
+docs_dir: './docs'
