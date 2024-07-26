@@ -2,12 +2,6 @@ from setuptools import setup, find_packages
 import os, re
 
 
-def get_version(package):
-    with open(os.path.join(package, '__init__.py'), 'rb') as init_py:
-        src = init_py.read().decode('utf-8')
-        return re.search("__version__ = ['\"]([^'\"]+)['\"]", src).group(1)
-
-
 def readme(file_name: str):
     with open(os.path.join(os.path.dirname(__file__), file_name)) as f:
         return f.read()
@@ -15,7 +9,6 @@ def readme(file_name: str):
 
 PACK_DATA = {
     "NAME": "libdb",
-    "VERSION": get_version("libdb"),
     "AUTHOR": "Mmdrza",
     "AUTHOR_EMAIL": "Pymmdrza@gmail.com",
     "DESCRIPTION": "Easy Management and Creation of Database Based on JSON Format with High Speed and Optimized",
@@ -35,7 +28,7 @@ PACK_DATA = {
 
 setup(
     name=PACK_DATA["NAME"],
-    version=PACK_DATA["VERSION"],
+    version="1.6.6",
     packages=find_packages(),
     install_requires=[],
     test_suite='tests',
