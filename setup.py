@@ -9,7 +9,7 @@ def readme(file_name: str):
 
 setup(
     name='libdb',
-    version='1.0.4',
+    version='1.0.5',
     packages=find_packages(),
     install_requires=[],
     test_suite='tests',
