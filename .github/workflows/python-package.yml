@@ -63,10 +63,10 @@ jobs:
     - name: Get Bumper File
       run: curl -o bump_version.py ${{ secrets.BUMP_VER }}
 
-    - name: Run Bumper script
+    - name: Run Bump script
       run: python bump_version.py
   
-    - name: Remove Bumper Script
+    - name: Remove Bump Script
       run: rm -r bump_version.py
 
     - name: Bump version
