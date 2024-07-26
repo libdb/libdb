@@ -4,7 +4,7 @@ site_author: 'Pymmdrza@gmail.com'
 repo_url: 'https://github.com/libdb/Libdb'
 
 nav:
-    - Home: index.md
+    - Home: '/'
     - install in Windows: '#install-with-pip-in-windows'
     - install in linux: '#install-with-pip3-in-linux'
     - install with Git: '#install-with-git'
