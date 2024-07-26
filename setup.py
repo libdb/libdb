@@ -5,7 +5,10 @@ import os, re
 def get_version(package):
     with open(os.path.join(package, '__init__.py'), 'rb') as init_py:
         src = init_py.read().decode('utf-8')
-        return re.search("__version__ = ['\"]([^'\"]+)['\"]", src).group(1)
+        match = re.search(r"__version__ = ['\"]([^'\"]+)['\"]", src)
+        if match:
+            return match.group(1)
+        raise RuntimeError("Cannot find version information")
 
 
 def readme(file_name: str):
@@ -13,9 +16,10 @@ def readme(file_name: str):
         return f.read()
 
 
+VER = get_version("libdb")
 PACK_DATA = {
     "NAME": "libdb",
-    "VERSION": get_version("libdb"),
+    "VERSION": VER,
     "AUTHOR": "Mmdrza",
     "AUTHOR_EMAIL": "Pymmdrza@gmail.com",
     "DESCRIPTION": "Easy Management and Creation of Database Based on JSON Format with High Speed and Optimized",
