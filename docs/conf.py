@@ -14,7 +14,9 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 def getVersion_init():
-    init_path = os.path.join(os.getcwd(), "libdb", "__init__.py")
+    root_path = os.path.dirname(os.path.abspath(__file__))
+    
+    init_path = os.path.join(root_path, "libdb", "__init__.py")
     with open(init_path, 'rb') as init_py:
         src = init_py.read().decode('utf-8')
         ver = re.search("__version__ = ['\"]([^'\"]+)['\"]", src).group(1)
